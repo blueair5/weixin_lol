@@ -12,7 +12,7 @@
 
 ****
 
-<img src="\images\image_1.jpg" alt="图片2" style="zoom:50%;" />
+<img src="/images/image_1.jpg" alt="图片2" style="zoom:50%;" />
 
 
 
