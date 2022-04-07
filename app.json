@@ -1,0 +1,48 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/videos/videos",
+        "pages/legend/legend",
+        "pages/home/home"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#999",
+        "backgroundColor" : "#F5E3F9",
+
+        "list" :[
+            {
+                "pagePath": "pages/index/index",
+                "text" : "首页",
+                "iconPath" :"images/images_item/home.png",
+                "selectedIconPath": "images/images_item/home1.png"
+            },
+            {
+                "pagePath": "pages/legend/legend",
+                "text" : "英雄一览",
+                "iconPath" :"images/images_item/legend.png",
+                "selectedIconPath": "images/images_item/legend2.png"
+            },
+            {
+                "pagePath": "pages/videos/videos",
+                "text" : "视频",
+                "iconPath" :"images/images_item/video.png",
+                "selectedIconPath": "images/images_item/video2.png"
+            },
+            {
+                "pagePath": "pages/home/home",
+                "text" : "我的",
+                "iconPath" :"images/images_item/me.png",
+                "selectedIconPath": "images/images_item/me2.png"
+            }
+        ]
+
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}
