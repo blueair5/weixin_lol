@@ -1,2 +1,10 @@
 <!--pages/legend/legend.wxml-->
-<text>pages/legend/legend.wxml</text>
+<view class="container">
+<view class="show" 
+wx:for="{{hero}}"
+wx:key="heroId"
+>
+<navigator url="/pages/hero/hero?id={{item.heroId}}">{{item.name}}</navigator>
+
+</view>
+</view>

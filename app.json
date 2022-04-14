@@ -3,7 +3,8 @@
         "pages/index/index",
         "pages/videos/videos",
         "pages/legend/legend",
-        "pages/home/home"
+        "pages/home/home",
+        "pages/hero/hero"
     ],
     "window": {
         "backgroundTextStyle": "light",

@@ -1,1 +1,4 @@
 /* pages/legend/legend.wxss */
+.text{
+    color: yellow;
+}

@@ -1,0 +1,22 @@
+<!--pages/hero/hero.wxml-->
+<view class="container">
+<view class="hero">
+<view class="name">{{hero.name}}</view>
+<view class="shortBio">{{hero.shortBio}}</view>
+<image class="skin" src="{{skins[0].mainImg}}"></image>
+<view class="spells"
+wx:for="{{spells}}"
+wx:key="spellKey"
+>
+{{item.name}}{{item.spellKey}}:
+{{item.description}}<text>\n</text><text>\n</text>
+</view>
+<view class="skins"
+wx:for="{{skins}}"
+wx:key="skinId"
+>
+<text>{{item.name}}\n</text>
+<image src="{{item.mainImg===''?(item.chromaImg===''?(image_null):item.chromaImg):item.mainImg}}" mode="widthFix"></image>
+</view>
+</view>
+</view>

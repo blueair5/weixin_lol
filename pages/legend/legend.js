@@ -1,19 +1,29 @@
 // pages/legend/legend.js
+import regeneratorRuntime from '../../lib/runtime/runtime';
+import {request} from "../../request/request";
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        hero:[]
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.getHeroInformations();
     },
+
+    // 获取英雄数据
+    async getHeroInformations(){
+        const result = await request({url:"https://game.gtimg.cn/images/lol/act/img/js/heroList/hero_list.js"});
+          this.setData({
+            hero:result.data.hero
+          })
+      },
 
     /**
      * 生命周期函数--监听页面初次渲染完成

@@ -1,4 +1,5 @@
-// pages/index/index.js
+// pages/hero/hero.js
+import regeneratorRuntime from '../../lib/runtime/runtime';
 import {request} from "../../request/request";
 Page({
 
@@ -6,24 +7,30 @@ Page({
      * 页面的初始数据
      */
     data: {
-       result:[]
+        hero:{},
+        skins:[],
+        spells:[],
+        image_null:'https://game.gtimg.cn/images/lol/act/img/skin/big20000.jpg'
     },
-
+    heroId: 0,
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-    request({url:"https://apps.game.qq.com/cmc/zmMcnTargetContentList?r0=jsonp&page=2&num=16&target=23&source=web_pc"})
-    .then(result => {
-      var strD = result.data.replace('callback(', '');
-    var str = strD.substring(0, strD.length - 2);
-          // console.log(str);
-    var rest = JSON.parse(str);
-    this.setData({
-        result:rest.data.result
-    });
-    });
-   
+        this.heroId = options.id;
+        console.log(this.heroId);
+        this.getHeroPerson();
+    },
+
+    async getHeroPerson(){
+        const url = "https://game.gtimg.cn/images/lol/act/img/js/hero/" +this.heroId+".js";
+        const hero = await request({url});
+        
+        this.setData({
+            hero:hero.data.hero,
+            skins:hero.data.skins,
+            spells:hero.data.spells
+        })
     },
 
     /**

@@ -1,2 +1,10 @@
-<!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class="head">
+<view class="title"
+wx:for="{{result}}"
+>{{item.sTitle}}
+<navigator url="{{item.sRedirectURL}}">
+<image src="{{item.sIMG}}"></image>
+</navigator>
+</view>
+</view>
+
